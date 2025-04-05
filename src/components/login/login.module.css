@@ -1,0 +1,119 @@
+/* Sayfanın yüksekliğini %100 değil, viewport kadar ayarlıyoruz */
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh; /* Mobil uyumlu tam ekran */
+    background: #f5f5f5;
+    padding: 16px;
+    overflow: hidden; /* Scrollbar çıkmasını engeller */
+    box-sizing: border-box;
+  }
+  
+  .loginBox {
+    background-color: #ffffff;
+    padding: 32px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    animation: fadeIn 0.3s ease-in-out;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+  }
+  
+  .loginBox h2 {
+    margin-bottom: 24px;
+    color: #ff6a00;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fff;
+    transition: 0.2s ease;
+    box-sizing: border-box;
+  }
+  
+  .input:focus {
+    border-color: #ff6a00;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 106, 0, 0.2);
+  }
+  
+  .loginButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6a00;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .loginButton:hover {
+    background-color: #e65c00;
+    transform: scale(1.01);
+  }
+  
+  .bottomText {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .bottomText a {
+    color: #ff6a00;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Mobil için daha esnek hale getiriyoruz */
+  @media (max-width: 480px) {
+    .loginBox {
+      padding: 24px 20px;
+      border-radius: 10px;
+    }
+  
+    .loginBox h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .input {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  
+    .loginButton {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .bottomText {
+      font-size: 12px;
+    }
+  }
+  
